@@ -166,3 +166,11 @@ a.secondary {
     filter: invert();
   }
 }
+/* styles/Home.module.css */
+
+.mainContent {
+  margin-left: 260px;
+  padding: 20px;
+  margin-top: 80px; /* Ajuste para o header */
+  transition: margin-left 0.5s;
+}

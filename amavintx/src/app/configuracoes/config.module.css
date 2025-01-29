@@ -1,0 +1,55 @@
+/* styles/Configuracoes.module.css */
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #002E40;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #0070f3;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.mainContent h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.mainContent p {
+  font-size: 16px;
+  color: #555;
+}

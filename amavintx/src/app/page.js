@@ -1,17 +1,25 @@
-import React from 'react';
-import Link from 'next/link';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-function HomePage() {
+"use client";
+import { useState } from 'react';
+import Header from '../components/header/Header';
+import SideMenu from '../components/sidebar/sidebar';
+import styles from './page.module.css';
+
+export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeSideMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <div className="container">
-      <h1>Bem-vindo!</h1>
-      <p>Este é um exemplo de página utilizando o Bootstrap em um projeto Next.js.</p>
-      <Link href="/configu">
-        <button className="btn btn-primary">Ir para Configuração</button>
-      </Link>
+    <div>
+      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <SideMenu isMenuOpen={isMenuOpen} closeSideMenu={closeSideMenu} />
+      <main className={styles.mainContent}>
+        <h2>Confirmações Recentes</h2>
+        <p>Aqui estão as confirmações mais recentes do sistema.</p>
+      </main>
     </div>
   );
 }
-
-export default HomePage;
